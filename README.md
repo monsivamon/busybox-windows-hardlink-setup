@@ -19,7 +19,7 @@ After running the script, you can use BusyBox applets as if they were native Win
 ## Requirements
 
 * Windows (NTFS filesystem required for hard links)
-* Administrator privileges (required for `fsutil hardlink`)
+* No administrator privileges required in most environments (hard links can be created by normal users on NTFS)
 * PowerShell available in PATH (for download)
 
 ---
@@ -62,6 +62,8 @@ That’s it. The setup is fully automated.
 
 * Existing `<applet>.exe` files in the `bin` directory will be removed and recreated
 * The script is safe to run multiple times
+* No administrator privileges are required in most environments
+* If hard link creation fails, re-run the script from an **elevated (Administrator) Command Prompt**
 * The repository does **not** include BusyBox itself
 
 BusyBox is licensed under **GPLv2**.
